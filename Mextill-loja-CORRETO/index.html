@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mextill - Loja Virtual</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>MEXTILL</h1>
+                    <p class="tagline">Tecnologia de Qualidade</p>
+                </div>
+                <nav class="nav">
+                    <a href="#home" class="nav-link">Depoimentos</a>
+                    <a href="#produtos" class="nav-link">Produtos</a>
+                    <a href="#contato" class="nav-link">Contato</a>
+                </nav>
+                <div class="cart-icon" onclick="toggleCart()">
+                    <span class="cart-icon-svg">🛒</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Products Section -->
+        <section class="produtos" id="produtos">
+            <div class="container">
+                <h2 class="section-title">Nossos Produtos</h2>
+                <div class="produtos-grid" id="produtosGrid">
+                    <!-- Produtos serão inseridos aqui via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials" id="home">
+            <div class="container">
+                <h2 class="section-title">O Que Nossos Clientes Dizem</h2>
+                <div class="testimonials-grid" id="testimonialsGrid">
+                    <!-- Depoimentos serão inseridos aqui via JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Carrinho de Compras</h3>
+            <button class="close-btn" onclick="toggleCart()">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Seu carrinho está vazio</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-price" id="totalPrice">R$ 0,00</span>
+            </div>
+            <button class="btn btn-primary btn-checkout" onclick="goToCheckout()">Ir para Pagamento</button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeCheckout()">✕</button>
+            <h2>Finalizar Compra</h2>
+            
+            <!-- Order Summary -->
+            <div class="checkout-section">
+                <h3>Resumo do Pedido</h3>
+                <div class="order-summary" id="orderSummary">
+                    <!-- Itens do carrinho serão listados aqui -->
+                </div>
+                <div class="order-total">
+                    <strong>Total: <span id="checkoutTotal">R$ 0,00</span></strong>
+                </div>
+            </div>
+
+            <!-- Payment Methods -->
+            <div class="checkout-section">
+                <h3>Escolha o Método de Pagamento</h3>
+                <div class="payment-methods">
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="pix" checked>
+                        <span class="payment-label">
+                            <strong>PIX</strong>
+                            <small>Transferência instantânea</small>
+                        </span>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="credit">
+                        <span class="payment-label">
+                            <strong>Cartão de Crédito</strong>
+                            <small>Parcelamento disponível</small>
+                        </span>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="debit">
+                        <span class="payment-label">
+                            <strong>Cartão de Débito</strong>
+                            <small>Débito na hora</small>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- PIX Details -->
+            <div class="checkout-section" id="pixSection" style="display: block;">
+                <h3>Dados para Pagamento PIX</h3>
+                <div class="pix-info">
+                    <p><strong>Chave PIX (CPF):</strong></p>
+                    <div class="pix-key">
+                        <span id="pixKey1">63455081000134</span>
+                        <button class="copy-btn" onclick="copyToClipboard('63455081000134')">Copiar</button>
+                    </div>
+                    <p style="margin-top: 15px;"><strong>Ou Chave PIX (Telefone):</strong></p>
+                    <div class="pix-key">
+                        <span id="pixKey2">11932539543</span>
+                        <button class="copy-btn" onclick="copyToClipboard('11932539543')">Copiar</button>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 0.9em; color: #ff8800;">
+                        ⚠️ Após realizar a transferência PIX, sua compra será confirmada em até 5 minutos.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Credit/Debit Form (Placeholder) -->
+            <div class="checkout-section" id="cardSection" style="display: none;">
+                <h3>Dados do Cartão</h3>
+                <p style="color: #ff8800; font-weight: bold;">
+                    ℹ️ A integração com cartão de crédito/débito será implementada em breve. 
+                    Por enquanto, utilize o PIX para completar sua compra.
+                </p>
+            </div>
+
+            <!-- Confirm Button -->
+            <button class="btn btn-primary btn-confirm" onclick="confirmPayment()">Confirmar Pagamento</button>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content success-content">
+            <div class="success-icon">✓</div>
+            <h2>Compra Realizada com Sucesso!</h2>
+            <p id="successMessage">Obrigado por sua compra. Você receberá um e-mail de confirmação em breve.</p>
+            <button class="btn btn-primary" onclick="closeSuccess()">Voltar à Loja</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Mextill - Loja Virtual. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5511934655522?text=Ol%C3%A1%20Mextill!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20seus%20produtos." target="_blank" class="whatsapp-button" title="Fale conosco no WhatsApp">
+        <span class="whatsapp-icon">💬</span>
+    </a>
+
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script src="js/app.js"></script>
+    <script src="js/payment.js"></script>
+</body>
+</html>

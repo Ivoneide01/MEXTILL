@@ -1,0 +1,17 @@
+{
+  "name": "mextill-loja",
+  "version": "1.0.0",
+  "description": "Loja Virtual Mextill - Tecnologia de Qualidade",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "keywords": [
+    "ecommerce",
+    "loja-virtual",
+    "mextill"
+  ],
+  "author": "Mextill",
+  "license": "MIT"
+}

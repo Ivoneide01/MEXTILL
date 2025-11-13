@@ -1,0 +1,53 @@
+<div id="card-payment-form-container">
+    <form id="card-payment-form">
+        <div class="form-group">
+            <label for="card-number-input">Número do Cartão</label>
+            <!-- O Mercado Pago.js renderizará o campo aqui -->
+            <div id="card-number-container" class="mp-input-container"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="card-holder-input">Nome no Cartão</label>
+            <input type="text" id="card-holder-input" name="cardholderName" placeholder="Nome Completo" required class="mp-input">
+        </div>
+
+        <div class="form-group-inline">
+            <div class="form-group">
+                <label for="card-expiration-date-input">Vencimento (MM/AA)</label>
+                <!-- O Mercado Pago.js renderizará o campo aqui -->
+                <div id="card-expiration-date-container" class="mp-input-container"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="card-cvv-input">Código de Segurança (CVV)</label>
+                <!-- O Mercado Pago.js renderizará o campo aqui -->
+                <div id="card-cvv-container" class="mp-input-container"></div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="installments-input">Parcelas</label>
+            <select id="installments-input" name="installments" required class="mp-input">
+                <option value="1">1x sem juros</option>
+            </select>
+        </div>
+
+        <div class="form-group-inline">
+            <div class="form-group">
+                <label for="doc-type-input">Tipo de Documento</label>
+                <select id="doc-type-input" name="identificationType" required class="mp-input">
+                    <option value="CPF">CPF</option>
+                    <option value="CNPJ">CNPJ</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="doc-number-input">Número do Documento</label>
+                <input type="text" id="doc-number-input" name="identificationNumber" placeholder="CPF/CNPJ" required class="mp-input">
+            </div>
+        </div>
+
+        <button type="submit" id="pay-button" class="btn btn-primary btn-confirm" disabled>Pagar com Cartão</button>
+        <p id="payment-status" style="margin-top: 10px; color: red;"></p>
+    </form>
+</div>
