@@ -8,25 +8,35 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <h1>MEXTILL</h1>
-                    <p class="tagline">Tecnologia de Qualidade</p>
-                </div>
-                <nav class="nav">
-                    <a href="#home" class="nav-link">Depoimentos</a>
-                    <a href="#produtos" class="nav-link">Produtos</a>
-                    <a href="#contato" class="nav-link">Contato</a>
-                </nav>
-                <div class="cart-icon" onclick="toggleCart()">
-                    <span class="cart-icon-svg">🛒</span>
-                    <span class="cart-count" id="cartCount">0</span>
-                </div>
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <h1>MEXTILL</h1>
+                <p class="tagline">Tecnologia de Qualidade</p>
+            </div>
+            
+            <!-- 🔎 AQUI ENTRA A BARRA DE PESQUISA -->
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Pesquisar produtos...">
+                <button id="searchBtn">🔍</button>
+            </div>
+            <!-- 🔎 FIM DA BARRA DE PESQUISA -->
+
+            <nav class="nav">
+                <a href="#home" class="nav-link">Depoimentos</a>
+                <a href="#produtos" class="nav-link">Produtos</a>
+                <a href="#contato" class="nav-link">Contato</a>
+            </nav>
+
+            <div class="cart-icon" onclick="toggleCart()">
+                <span class="cart-icon-svg">🛒</span>
+                <span class="cart-count" id="cartCount">0</span>
             </div>
         </div>
-    </header>
+    </div>
+</header>
+
 
     <!-- Main Content -->
     <main>

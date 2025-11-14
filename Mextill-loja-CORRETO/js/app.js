@@ -168,11 +168,11 @@ function renderizarDepoimentos() {
 }
 
 // Renderizar produtos na página
-function renderizarProdutos() {
+function renderizarProdutos(lista = produtos) {
     const grid = document.getElementById('produtosGrid');
     grid.innerHTML = '';
 
-    produtos.forEach(produto => {
+    lista.forEach(produto => {
         const card = document.createElement('div');
         card.className = 'produto-card';
         card.innerHTML = `
@@ -187,6 +187,7 @@ function renderizarProdutos() {
         grid.appendChild(card);
     });
 }
+
 
 // Adicionar produto ao carrinho
 function adicionarAoCarrinho(produtoId) {
@@ -483,3 +484,22 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// --- SISTEMA DE BUSCA DE PRODUTOS ---
+const searchInput = document.getElementById("searchInput");
+
+if (searchInput) {
+    searchInput.addEventListener("input", () => {
+        const termo = searchInput.value.toLowerCase();
+
+        // Filtra produtos pelo nome ou descrição
+        const produtosFiltrados = produtos.filter(prod => 
+            prod.nome.toLowerCase().includes(termo) ||
+            prod.descricao.toLowerCase().includes(termo)
+        );
+
+        // Renderiza somente os produtos filtrados
+        renderizarProdutos(produtosFiltrados);
+    });
+}
+
