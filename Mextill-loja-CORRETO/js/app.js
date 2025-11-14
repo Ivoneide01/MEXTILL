@@ -493,10 +493,13 @@ if (searchInput) {
         const termo = searchInput.value.toLowerCase();
 
         // Filtra produtos pelo nome ou descrição
-        const produtosFiltrados = produtos.filter(prod => 
-            prod.nome.toLowerCase().includes(termo) ||
-            prod.descricao.toLowerCase().includes(termo)
-        );
+       // Filtra produtos por nome, descrição OU categoria
+const produtosFiltrados = produtos.filter(prod => 
+    prod.nome.toLowerCase().includes(termo) ||
+    prod.descricao.toLowerCase().includes(termo) ||
+    prod.categoria.toLowerCase().includes(termo)
+);
+
 
         // Renderiza somente os produtos filtrados
         renderizarProdutos(produtosFiltrados);
