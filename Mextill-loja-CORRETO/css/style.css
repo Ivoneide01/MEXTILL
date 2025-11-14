@@ -944,9 +944,20 @@ body {
 }
 
 .search-container input {
-    padding: 8px 12px;
+    padding: 8px 80px;
     border: 1px solid #ccc;
     border-radius: 6px;
+}
+@media (max-width: 1024px) {
+    .search-container input {
+        padding: 8px 40px; /* reduzido */
+    }
+}
+@media (max-width: 600px) {
+    .search-container input {
+        padding: 8px 20px; /* bem menor */
+        width: 100%;       /* ocupa toda a largura do celular */
+    }
 }
 
 .search-container button {
