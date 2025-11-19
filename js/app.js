@@ -197,7 +197,13 @@ const produtos = [
         categoria: 'Celular',
         preco: 1009.00,
         descricao: 'Lançamento 2025',
-        imagem: 'img/products/xiaomi_generico.jpg'
+                   imagem: 'https://images.openai.com/thumbnails/url/3rXZrnicDcntDkJQGADgK0Ixha21TMNKTlra8cc45Gt4j_O2uJ3uqrup5-_z_dSIICxFKQc2LYBlIWE-aHIlMMOGyWzsFVGPAM1Q7fnuf9bhUpgui3zwsySNzXdoRPiAegmoCcfpDrxPT3gL3F5KthvP9OM4AJ2Tp0QCY9K72el4e1PpmdqEhGutFXWyQszZq-upZ88ODTPkmcrL4UrAS_EHYlE6qQ',
+        imagens: [
+            'https://images.openai.com/thumbnails/url/3rXZrnicDcntDkJQGADgK0Ixha21TMNKTlra8cc45Gt4j_O2uJ3uqrup5-_z_dSIICxFKQc2LYBlIWE-aHIlMMOGyWzsFVGPAM1Q7fnuf9bhUpgui3zwsySNzXdoRPiAegmoCcfpDrxPT3gL3F5KthvP9OM4AJ2Tp0QCY9K72el4e1PpmdqEhGutFXWyQszZq-upZ88ODTPkmcrL4UrAS_EHYlE6qQ',
+            'https://images.openai.com/thumbnails/url/iRRxC3icDcnbEoFAAADQLyIi2maMQaHrKk2qt9qi7bK2div-yu_4G87r-X4KzilTBCEnqHtTnmcTnpLF9MF4wjGaomcjsOJJKSaPbbv5n7JzMnBCnhjLg6fpoQ9cVHXrIjHWB7A8nOy4bI6gJWYRsNtcvMtm7TC504dO8i7Gy5JWYdnDzJFgEKg4nFQzS4xVFe1nVVrrQ3SlEPQ1c-05OS-g5UdHPOrX3IeDjz1t_AE4eT1-',
+            'https://images4.kabum.com.br/produtos/fotos/sync_mirakl/885034/xlarge/Smartphone-Xiaomi-15-Ultra-5g-512gb-16gb-Global-Preto_1761698911.png',
+            'https://images.openai.com/thumbnails/url/KiKV3XicDcnbDoIgAADQL_Ky0BVuraFt2UUr4yF8aQoMaUtB8dZH9T_9TZ3X8_1UxqgucBxe03ZWhjPLlDWwRWcKI6lNm5fTVY1SshYbvf5fgFIGd_QWX1o-ywinwpCtLr19Mhat8LEqyzHbU7Dix0GQB8QDTEKCDvJwRygF-MXxVCCWKj8K--vR6sliIn1eT-9-XHoui-BTZzEj7nzOTgaEMbTaXOexbFzt_QBPaD4V'
+        ]
     },
     {
         id: 12,
