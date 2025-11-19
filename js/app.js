@@ -130,6 +130,398 @@ const produtos = [
         preco: 6499.00,
         descricao: 'Câmera com IA avançada',
         imagem: 'img/products/pixel_8_pro.jpg'
+    },
+    {
+        id: 11,
+        nome: 'Xiaomi Modelo 2025-1',
+        categoria: 'Celular',
+        preco: 1009.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/xiaomi_generico.jpg'
+    },
+    {
+        id: 12,
+        nome: 'Samsung Modelo 2025-2',
+        categoria: 'Celular',
+        preco: 1019.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/samsung_generico.jpg'
+    },
+    {
+        id: 13,
+        nome: 'Motorola Modelo 2025-3',
+        categoria: 'Celular',
+        preco: 1029.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/motorola_generico.png'
+    },
+    {
+        id: 14,
+        nome: 'Apple Modelo 2025-4',
+        categoria: 'Celular',
+        preco: 1039.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/apple_generico.jpg'
+    },
+    {
+        id: 15,
+        nome: 'Xiaomi Modelo 2025-5',
+        categoria: 'Celular',
+        preco: 1049.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/xiaomi_generico.jpg'
+    },
+    {
+        id: 16,
+        nome: 'Samsung Modelo 2025-6',
+        categoria: 'Celular',
+        preco: 1059.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/samsung_generico.jpg'
+    },
+    {
+        id: 17,
+        nome: 'Motorola Modelo 2025-7',
+        categoria: 'Celular',
+        preco: 1069.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/motorola_generico.png'
+    },
+    {
+        id: 18,
+        nome: 'Apple Modelo 2025-8',
+        categoria: 'Celular',
+        preco: 1079.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/apple_generico.jpg'
+    },
+    {
+        id: 19,
+        nome: 'Xiaomi Modelo 2025-9',
+        categoria: 'Celular',
+        preco: 1089.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/xiaomi_generico.jpg'
+    },
+    {
+        id: 20,
+        nome: 'Samsung Modelo 2025-10',
+        categoria: 'Celular',
+        preco: 1099.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/samsung_generico.jpg'
+    },
+    {
+        id: 21,
+        nome: 'Motorola Modelo 2025-11',
+        categoria: 'Celular',
+        preco: 1109.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/motorola_generico.png'
+    },
+    {
+        id: 22,
+        nome: 'Apple Modelo 2025-12',
+        categoria: 'Celular',
+        preco: 1119.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/apple_generico.jpg'
+    },
+    {
+        id: 23,
+        nome: 'Xiaomi Modelo 2025-13',
+        categoria: 'Celular',
+        preco: 1129.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/xiaomi_generico.jpg'
+    },
+    {
+        id: 24,
+        nome: 'Samsung Modelo 2025-14',
+        categoria: 'Celular',
+        preco: 1139.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/samsung_generico.jpg'
+    },
+    {
+        id: 25,
+        nome: 'Motorola Modelo 2025-15',
+        categoria: 'Celular',
+        preco: 1149.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/motorola_generico.png'
+    },
+    {
+        id: 26,
+        nome: 'Apple Modelo 2025-16',
+        categoria: 'Celular',
+        preco: 1159.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/apple_generico.jpg'
+    },
+    {
+        id: 27,
+        nome: 'Xiaomi Modelo 2025-17',
+        categoria: 'Celular',
+        preco: 1169.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/xiaomi_generico.jpg'
+    },
+    {
+        id: 28,
+        nome: 'Samsung Modelo 2025-18',
+        categoria: 'Celular',
+        preco: 1179.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/samsung_generico.jpg'
+    },
+    {
+        id: 29,
+        nome: 'Motorola Modelo 2025-19',
+        categoria: 'Celular',
+        preco: 1189.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/motorola_generico.png'
+    },
+    {
+        id: 30,
+        nome: 'Apple Modelo 2025-20',
+        categoria: 'Celular',
+        preco: 1199.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/apple_generico.jpg'
+    },
+    {
+        id: 31,
+        nome: 'Xiaomi Modelo 2025-21',
+        categoria: 'Celular',
+        preco: 1209.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/xiaomi_generico.jpg'
+    },
+    {
+        id: 32,
+        nome: 'Samsung Modelo 2025-22',
+        categoria: 'Celular',
+        preco: 1219.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/samsung_generico.jpg'
+    },
+    {
+        id: 33,
+        nome: 'Motorola Modelo 2025-23',
+        categoria: 'Celular',
+        preco: 1229.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/motorola_generico.png'
+    },
+    {
+        id: 34,
+        nome: 'Apple Modelo 2025-24',
+        categoria: 'Celular',
+        preco: 1239.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/apple_generico.jpg'
+    },
+    {
+        id: 35,
+        nome: 'Xiaomi Modelo 2025-25',
+        categoria: 'Celular',
+        preco: 1249.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/xiaomi_generico.jpg'
+    },
+    {
+        id: 36,
+        nome: 'Samsung Modelo 2025-26',
+        categoria: 'Celular',
+        preco: 1259.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/samsung_generico.jpg'
+    },
+    {
+        id: 37,
+        nome: 'Motorola Modelo 2025-27',
+        categoria: 'Celular',
+        preco: 1269.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/motorola_generico.png'
+    },
+    {
+        id: 38,
+        nome: 'Apple Modelo 2025-28',
+        categoria: 'Celular',
+        preco: 1279.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/apple_generico.jpg'
+    },
+    {
+        id: 39,
+        nome: 'Xiaomi Modelo 2025-29',
+        categoria: 'Celular',
+        preco: 1289.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/xiaomi_generico.jpg'
+    },
+    {
+        id: 40,
+        nome: 'Samsung Modelo 2025-30',
+        categoria: 'Celular',
+        preco: 1299.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/samsung_generico.jpg'
+    },
+    {
+        id: 41,
+        nome: 'Motorola Modelo 2025-31',
+        categoria: 'Celular',
+        preco: 1309.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/motorola_generico.png'
+    },
+    {
+        id: 42,
+        nome: 'Apple Modelo 2025-32',
+        categoria: 'Celular',
+        preco: 1319.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/apple_generico.jpg'
+    },
+    {
+        id: 43,
+        nome: 'Xiaomi Modelo 2025-33',
+        categoria: 'Celular',
+        preco: 1329.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/xiaomi_generico.jpg'
+    },
+    {
+        id: 44,
+        nome: 'Samsung Modelo 2025-34',
+        categoria: 'Celular',
+        preco: 1339.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/samsung_generico.jpg'
+    },
+    {
+        id: 45,
+        nome: 'Motorola Modelo 2025-35',
+        categoria: 'Celular',
+        preco: 1349.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/motorola_generico.png'
+    },
+    {
+        id: 46,
+        nome: 'Apple Modelo 2025-36',
+        categoria: 'Celular',
+        preco: 1359.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/apple_generico.jpg'
+    },
+    {
+        id: 47,
+        nome: 'Xiaomi Modelo 2025-37',
+        categoria: 'Celular',
+        preco: 1369.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/xiaomi_generico.jpg'
+    },
+    {
+        id: 48,
+        nome: 'Samsung Modelo 2025-38',
+        categoria: 'Celular',
+        preco: 1379.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/samsung_generico.jpg'
+    },
+    {
+        id: 49,
+        nome: 'Motorola Modelo 2025-39',
+        categoria: 'Celular',
+        preco: 1389.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/motorola_generico.png'
+    },
+    {
+        id: 50,
+        nome: 'Apple Modelo 2025-40',
+        categoria: 'Celular',
+        preco: 1399.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/apple_generico.jpg'
+    },
+    {
+        id: 51,
+        nome: 'Xiaomi Modelo 2025-41',
+        categoria: 'Celular',
+        preco: 1409.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/xiaomi_generico.jpg'
+    },
+    {
+        id: 52,
+        nome: 'Samsung Modelo 2025-42',
+        categoria: 'Celular',
+        preco: 1419.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/samsung_generico.jpg'
+    },
+    {
+        id: 53,
+        nome: 'Motorola Modelo 2025-43',
+        categoria: 'Celular',
+        preco: 1429.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/motorola_generico.png'
+    },
+    {
+        id: 54,
+        nome: 'Apple Modelo 2025-44',
+        categoria: 'Celular',
+        preco: 1439.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/apple_generico.jpg'
+    },
+    {
+        id: 55,
+        nome: 'Xiaomi Modelo 2025-45',
+        categoria: 'Celular',
+        preco: 1449.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/xiaomi_generico.jpg'
+    },
+    {
+        id: 56,
+        nome: 'Samsung Modelo 2025-46',
+        categoria: 'Celular',
+        preco: 1459.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/samsung_generico.jpg'
+    },
+    {
+        id: 57,
+        nome: 'Motorola Modelo 2025-47',
+        categoria: 'Celular',
+        preco: 1469.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/motorola_generico.png'
+    },
+    {
+        id: 58,
+        nome: 'Apple Modelo 2025-48',
+        categoria: 'Celular',
+        preco: 1479.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/apple_generico.jpg'
+    },
+    {
+        id: 59,
+        nome: 'Xiaomi Modelo 2025-49',
+        categoria: 'Celular',
+        preco: 1489.00,
+        descricao: 'Lançamento 2025',
+        imagem: 'img/products/xiaomi_generico.jpg'
     }
 ];
 
