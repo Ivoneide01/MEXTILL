@@ -183,7 +183,13 @@ const produtos = [
         categoria: 'Celular',
         preco: 6499.00,
         descricao: 'Câmera com IA avançada',
-        imagem: 'img/products/pixel_8_pro.jpg'
+                 imagem: 'https://images6.kabum.com.br/produtos/fotos/sync_mirakl/535146/xlarge/Smartphones-Google-Pixel-8-Pro-128GB-Obsidian_1753474490.jpg',
+        imagens: [
+            'https://images6.kabum.com.br/produtos/fotos/sync_mirakl/535146/xlarge/Smartphones-Google-Pixel-8-Pro-128GB-Obsidian_1753474490.jpg',
+            'https://images5.kabum.com.br/produtos/fotos/sync_mirakl/592425/xlarge/Google-Pixel-8a-128GB-Bay-Desbloqueado_1758919779.png',
+            'https://images0.kabum.com.br/produtos/fotos/sync_mirakl/535160/xlarge/Smartphone-Google-Pixel-8-Pro-512GB-Bay-Blue_1754071781.jpg',
+            'https://img.odcdn.com.br/wp-content/uploads/2023/10/pixel-8-pro-e1701881358432.jpg'
+        ]
     },
     {
         id: 11,
