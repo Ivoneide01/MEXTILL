@@ -211,7 +211,13 @@ const produtos = [
         categoria: 'Celular',
         preco: 1019.00,
         descricao: 'Lançamento 2025',
-        imagem: 'img/products/samsung_generico.jpg'
+                     imagem: 'https://images.openai.com/thumbnails/url/rrqORnicDclLDoIwFADAE_GRzwITY0gjiCgSYhFXDbRIUYFXKRA4ldfxNjrb-X64lNCvNa1s6XsGWTJFFu1KrXqZy5qqtGu0nncAdVttxeZ_azdijk8TG_HeBDKYjWDcPYZdlhlGgEPdP2Fi4RHaxLPAswMlKnmqI1KtzMMuXp4X2KMAkVSYTXKeX3dRgPO2E4PzzLgOVh7LB0Mip9m0G-sqKrANL90it0XSG5l-ZxI-vQ',
+        imagens: [
+            'https://images.openai.com/static-rsc-1/6CuY4AryYu3hsedNkJW-d5lBq1IZleuMre5aBP67NLsMFaw7QMLv9VYNAInV9yMSbmzMCvA2lmJQrP1q_jPrm56oshtPXldmsJO4MmWnPwq-0Eo5ZGphDc_Cy7cv_bggvqFoXUrktiuIXSps__yZ55rRFLWb65uVN70kMsi7zjonJMwUEnzQYtwhbP4p7UwxYjbNmQ9GdbO2PB5HCygmmAUoeai_Llt8Nt4PU0QmpTBPldKkJF1UZmcoLG_wOCv5JTWiuUDY4Uxq7NiCPZhl_g',
+            'https://images.openai.com/thumbnails/url/oYmYMXicDcnbCoIwAADQL1JnOZhCRFGsi5TTtPQlcuqm0Fxu4eWr-p3-ps7r-X641lJ5llUK2o1Sl4WhcwFMpvRD19Sk7dNSvJWyFmz5WvzPW50KF9MQNFHg5I8Y9adzmkSomCvkGOHldqcDK9HQszSosH0Uu5CefdfZt3nYJFPn6tkeks7OsngkbkSdFUQYS1ZMeFjbB8CRCrZTMpLZZaPfPDXgUPWAwpgLH17JD1TxPYY',
+            'https://images7.kabum.com.br/produtos/fotos/magalu/876187/xlarge/Smartphone-Samsung-Galaxy-S25-Edge-512GB-Tit-nio-Prata-5G-12GB-RAM-6-7-C-m-Dupla-Selfie-12MP_1760462042.jpg',
+            'https://images7.kabum.com.br/produtos/fotos/magalu/876187/xlarge/Smartphone-Samsung-Galaxy-S25-Edge-512GB-Tit-nio-Prata-5G-12GB-RAM-6-7-C-m-Dupla-Selfie-12MP_1760462046.jpg'
+        ]
     },
     {
         id: 13,
