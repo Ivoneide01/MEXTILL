@@ -57,7 +57,7 @@ const produtos = [
         categoria: 'Celular',
         preco: 7999.00,
         descricao: 'Smartphone topo de linha',
-        imagem: 'MEXTILL/img/apple_generico.jpg'
+        imagem: 'https://m.media-amazon.com/images/I/41+jLq6yJKL._AC_SL1000_.jpg'
     },
     {
         id: 2,
