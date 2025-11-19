@@ -59,9 +59,9 @@ const produtos = [
         descricao: 'Smartphone topo de linha',
         imagem: 'https://m.media-amazon.com/images/I/41+jLq6yJKL._AC_SX679_.jpg',
         imagens: [
-            'https://m.media-amazon.com/images/I/51k8c06WvdL._AC_SX679_.jpg',
-            'https://m.media-amazon.com/images/I/51k8c06WvdL._AC_SX679_.jpg',
-            'https://m.media-amazon.com/images/I/51k8c06WvdL._AC_SX679_.jpg',
+            'https://m.media-amazon.com/images/I/41+jLq6yJKL._AC_SX679_.jpg',
+            'https://m.media-amazon.com/images/I/31jrTen3vUL._AC_SX679_.jpg',
+            'https://m.media-amazon.com/images/I/61JfjeFrqhL._AC_SX679_.jpg',
             'https://m.media-amazon.com/images/I/51k8c06WvdL._AC_SX679_.jpg'
         ]
     },
