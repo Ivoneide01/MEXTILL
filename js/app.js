@@ -225,7 +225,13 @@ const produtos = [
         categoria: 'Celular',
         preco: 1029.00,
         descricao: 'Lançamento 2025',
-        imagem: 'img/products/motorola_generico.png'
+                 imagem: 'https://m.media-amazon.com/images/I/61fCuWd+6fL._AC_SX679_.jpg',
+        imagens: [
+            'https://m.media-amazon.com/images/I/61fCuWd+6fL._AC_SX679_.jpg',
+            'https://m.media-amazon.com/images/I/61pTqS1tMPL._AC_SX679_.jpg',
+            'https://m.media-amazon.com/images/I/61Qnuu3DH1L._AC_SX679_.jpg',
+            'https://m.media-amazon.com/images/I/61dOZuh80LL._AC_SX679_.jpg'
+        ]
     },
     {
         id: 14,
