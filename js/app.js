@@ -85,12 +85,12 @@ const produtos = [
         categoria: 'Celular',
         preco: 4499.00,
         descricao: 'Câmera profissional',
-        imagem: 'img/products/xiaomi_14_ultra.jpg',
+        imagem: 'https://i.ebayimg.com/images/g/QXwAAOSwI4lngknV/s-l1600.webp',
         imagens: [
-            'https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1707988794.42852831.png',
-            'https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1707988800.69766963.png',
-            'https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1707988806.93894839.png',
-            'https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1707988813.17755389.png'
+            'https://i.ebayimg.com/images/g/QXwAAOSwI4lngknV/s-l1600.webp',
+            'https://i.ebayimg.com/images/g/wD8AAeSwqKdoiiDB/s-l1600.webp',
+            'https://i.ebayimg.com/images/g/P8UAAOSwWYZngknS/s-l1600.webp',
+            'https://i.ebayimg.com/images/g/UiYAAeSwOSpocgMb/s-l1600.webp'
         ]
     },
     {
