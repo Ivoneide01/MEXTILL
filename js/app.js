@@ -169,7 +169,13 @@ const produtos = [
         categoria: 'Notebook',
         preco: 11999.00,
         descricao: 'Notebook gamer RTX 4090',
-        imagem: 'img/products/asus_rog.png'
+                 imagem: 'https://m.media-amazon.com/images/I/51LAU1+ACrL._AC_SX679_.jpg',
+        imagens: [
+            'https://http2.mlstatic.com/D_NQ_NP_2X_644479-MLA95687171866_102025-F.webp',
+            'https://http2.mlstatic.com/D_NQ_NP_2X_698372-MLA88118777585_072025-F.webp',
+            'https://http2.mlstatic.com/D_NQ_NP_2X_814511-MLA88073299636_072025-F.webp',
+            'https://http2.mlstatic.com/D_NQ_NP_2X_987820-MLA88413761065_072025-F.webp'
+        ]
     },
     {
         id: 10,
