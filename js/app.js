@@ -57,7 +57,7 @@ const produtos = [
         categoria: 'Celular',
         preco: 7999.00,
         descricao: 'Smartphone topo de linha',
-        imagem: 'img/apple_generico.jpg'
+        imagem: 'apple_generico.jpg'
     },
     {
         id: 2,
