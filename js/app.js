@@ -57,7 +57,7 @@ const produtos = [
         categoria: 'Celular',
         preco: 7999.00,
         descricao: 'Smartphone topo de linha',
-        imagem: 'img/products/iphone_15_pro.png'
+        imagem: 'products/iphone_15_pro.png'
     },
     {
         id: 2,
