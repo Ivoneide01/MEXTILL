@@ -155,7 +155,13 @@ const produtos = [
         categoria: 'Notebook',
         preco: 7499.00,
         descricao: 'Notebook corporativo',
-        imagem: 'img/products/thinkpad_x1.jpg'
+                imagem: 'https://m.media-amazon.com/images/I/51LAU1+ACrL._AC_SX679_.jpg',
+        imagens: [
+            'https://acdn-us.mitiendanube.com/stores/002/015/492/products/1-4fa605cb749417068c17615666185862-1024-1024.webp',
+            'https://acdn-us.mitiendanube.com/stores/002/015/492/products/2-aa194fd0640ad3c4ae17615666186750-1024-1024.webp',
+            'https://acdn-us.mitiendanube.com/stores/002/015/492/products/4-7a7cf98b71c4fb15c017615666184782-1024-1024.webp',
+            'https://acdn-us.mitiendanube.com/stores/002/015/492/products/3-b156a9e31515c3b34817615666184143-1024-1024.webp'
+        ]
     },
     {
         id: 9,
