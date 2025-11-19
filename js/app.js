@@ -104,7 +104,7 @@ const produtos = [
             'https://m.media-amazon.com/images/I/61sEJ2+OAbL._AC_SX679_.jpg',
             'https://m.media-amazon.com/images/I/41NH-l7ctJL._AC_SX679_.jpg',
             'https://m.media-amazon.com/images/I/51hVyLLOebL._AC_SX679_.jpg',
-            'https://m.media-amazon.com/images/I/51hVyLLOebL._AC_SX679_.jpg'
+            'https://m.media-amazon.com/images/I/61LHiDQIGrL._AC_SX679_.jpg'
         ]
     },
     {
