@@ -10,28 +10,28 @@ const depoimentos = [
         profissao: 'Desenvolvedor',
         texto: 'Excelente qualidade nos produtos! Entrega rápida e atendimento de primeira. Recomendo muito!',
         estrelas: 5,
-        emoji: '👨‍💻'
+        emoji: 'img/avatar-dev.png'
     },
     {
         nome: 'Maria Santos',
         profissao: 'Empresária',
         texto: 'Melhor loja de tecnologia que já comprei. Preços competitivos e produtos originais garantidos.',
         estrelas: 5,
-        emoji: '👩‍💼'
+        emoji: 'img/avatar-business.png'
     },
     {
         nome: 'João Oliveira',
         profissao: 'Estudante',
         texto: 'Comprei meu notebook aqui e chegou perfeito! Suporte técnico muito atencioso.',
         estrelas: 5,
-        emoji: '👨‍🎓'
+        emoji: 'img/avatar-student.png'
     },
     {
         nome: 'Ana Costa',
         profissao: 'Designer',
         texto: 'Produtos de qualidade com preços justos. Voltaria a comprar com certeza!',
         estrelas: 5,
-        emoji: '👩‍🎨'
+        emoji: 'img/avatar-designer.png'
     },
     {
         nome: 'Pedro Ferreira',
@@ -45,7 +45,7 @@ const depoimentos = [
         profissao: 'Professora',
         texto: 'Adorei a experiência de compra! Fácil, rápido e seguro. Parabéns Mextill!',
         estrelas: 5,
-        emoji: '👩‍🏫'
+        emoji: 'img/avatar-teacher.png'
     }
 ];
 
@@ -57,7 +57,7 @@ const produtos = [
         categoria: 'Celular',
         preco: 7999.00,
         descricao: 'Smartphone topo de linha',
-        emoji: '📱'
+        emoji: 'img/icon-mobile.png'
     },
     {
         id: 2,
@@ -65,7 +65,7 @@ const produtos = [
         categoria: 'Celular',
         preco: 5999.00,
         descricao: 'Android de alta performance',
-        emoji: '📱'
+        emoji: 'img/icon-mobile.png'
     },
     {
         id: 3,
@@ -73,7 +73,7 @@ const produtos = [
         categoria: 'Celular',
         preco: 4499.00,
         descricao: 'Câmera profissional',
-        emoji: '📱'
+        emoji: 'img/icon-mobile.png'
     },
     {
         id: 4,
@@ -81,7 +81,7 @@ const produtos = [
         categoria: 'Tablet',
         preco: 8999.00,
         descricao: 'Tablet premium com M2',
-        emoji: '📱'
+        emoji: 'img/icon-mobile.png'
     },
     {
         id: 5,
@@ -89,7 +89,7 @@ const produtos = [
         categoria: 'Tablet',
         preco: 4999.00,
         descricao: 'Tablet AMOLED 120Hz',
-        emoji: '📱'
+        emoji: 'img/icon-mobile.png'
     },
     {
         id: 6,
@@ -97,7 +97,7 @@ const produtos = [
         categoria: 'Notebook',
         preco: 15999.00,
         descricao: 'Laptop profissional M3 Max',
-        emoji: '💻'
+        emoji: 'img/icon-laptop.png'
     },
     {
         id: 7,
@@ -105,7 +105,7 @@ const produtos = [
         categoria: 'Notebook',
         preco: 9999.00,
         descricao: 'Notebook ultrafino',
-        emoji: '💻'
+        emoji: 'img/icon-laptop.png'
     },
     {
         id: 8,
@@ -113,7 +113,7 @@ const produtos = [
         categoria: 'Notebook',
         preco: 7499.00,
         descricao: 'Notebook corporativo',
-        emoji: '💻'
+        emoji: 'img/icon-laptop.png'
     },
     {
         id: 9,
@@ -121,7 +121,7 @@ const produtos = [
         categoria: 'Notebook',
         preco: 11999.00,
         descricao: 'Notebook gamer RTX 4090',
-        emoji: '💻'
+        emoji: 'img/icon-laptop.png'
     },
     {
         id: 10,
@@ -129,7 +129,7 @@ const produtos = [
         categoria: 'Celular',
         preco: 6499.00,
         descricao: 'Câmera com IA avançada',
-        emoji: '📱'
+        emoji: 'img/icon-mobile.png'
     }
 ];
 
@@ -156,7 +156,7 @@ function renderizarDepoimentos() {
             <div class="testimonial-stars">${estrelas}</div>
             <div class="testimonial-text">"${depoimento.texto}"</div>
             <div class="testimonial-author">
-                <div class="testimonial-avatar">${depoimento.emoji}</div>
+                <div class="testimonial-avatar"><img src="${depoimento.emoji}" alt="Avatar" class="avatar-img"></div>
                 <div class="testimonial-info">
                     <h4>${depoimento.nome}</h4>
                     <p>${depoimento.profissao}</p>
@@ -176,7 +176,7 @@ function renderizarProdutos(lista = produtos) {
         const card = document.createElement('div');
         card.className = 'produto-card';
         card.innerHTML = `
-            <div class="produto-imagem">${produto.emoji}</div>
+            <div class="produto-imagem"><img src="${produto.emoji}" alt="Ícone do Produto" class="produto-icon"></div>
             <div class="produto-nome">${produto.nome}</div>
             <div class="produto-descricao">${produto.descricao}</div>
             <div class="produto-preco">R$ ${produto.preco.toFixed(2).replace('.', ',')}</div>
