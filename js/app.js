@@ -71,12 +71,12 @@ const produtos = [
         categoria: 'Celular',
         preco: 5999.00,
         descricao: 'Android de alta performance',
-        imagem: 'img/products/galaxy_s24.jpg',
+        imagem: 'https://m.media-amazon.com/images/I/61P12ycOI7L._AC_SL1500_.jpg',
         imagens: [
-            'https://images.samsung.com/br/smartphones/galaxy-s24/images/galaxy-s24-highlights-color-front-violet.jpg',
-            'https://images.samsung.com/br/smartphones/galaxy-s24/images/galaxy-s24-highlights-color-back-violet.jpg',
-            'https://images.samsung.com/br/smartphones/galaxy-s24/images/galaxy-s24-highlights-color-side-violet.jpg',
-            'https://images.samsung.com/br/smartphones/galaxy-s24/images/galaxy-s24-highlights-design-camera.jpg'
+            'https://m.media-amazon.com/images/I/61P12ycOI7L._AC_SL1500_.jpg',
+            'https://m.media-amazon.com/images/I/71xptk3CltL._AC_SX679_.jpg',
+            'https://m.media-amazon.com/images/I/61ApxFEvTSL._AC_SX679_.jpg',
+            'https://m.media-amazon.com/images/I/61mfpvRrQBL._AC_SX679_.jpg'
         ]
     },
     {
