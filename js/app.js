@@ -113,12 +113,12 @@ const produtos = [
         categoria: 'Tablet',
         preco: 4999.00,
         descricao: 'Tablet AMOLED 120Hz',
-         imagem: 'https://m.media-amazon.com/images/I/417bx91cc8L._AC_SX679_.jpg',
+         imagem: 'https://m.media-amazon.com/images/I/51Y09aVg80L._AC_SX679_.jpg',
         imagens: [
-            'https://m.media-amazon.com/images/I/41A2TWFOOVL._AC_SX679_.jpg',
-            'https://m.media-amazon.com/images/I/41Co9eLcH1L._AC_SX679_.jpg',
-            'https://m.media-amazon.com/images/I/71r2uLmP3KL._AC_SX679_.jpg',
-            'https://m.media-amazon.com/images/I/3112F29KGdL._AC_SL1053_.jpg'
+            'https://m.media-amazon.com/images/I/51Y09aVg80L._AC_SX679_.jpg',
+            'https://m.media-amazon.com/images/I/51qA4PVOgTL._AC_SX679_.jpg',
+            'https://m.media-amazon.com/images/I/41MfugP9b1L._AC_SX679_.jpg',
+            'https://m.media-amazon.com/images/I/2107kSY+TzL._AC_SL1000_.jpg'
         ]
     },
     {
