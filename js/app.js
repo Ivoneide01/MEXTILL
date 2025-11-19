@@ -141,7 +141,13 @@ const produtos = [
         categoria: 'Notebook',
         preco: 9999.00,
         descricao: 'Notebook ultrafino',
-        imagem: 'img/products/dell_xps_15.jpg'
+               imagem: 'https://m.media-amazon.com/images/I/51LAU1+ACrL._AC_SX679_.jpg',
+        imagens: [
+            'https://p1-ofp.static.pub//fes/cms/2024/07/05/5zlebnmd2r6qoijtnbdue8c59529q2840002.png?width=400&height=400',
+            'https://p3-ofp.static.pub//fes/cms/2024/02/05/caqs1cskxq1zogc2bvou8lblvwuf09813272.jpg',
+            'https://p3-ofp.static.pub//fes/cms/2024/02/01/nhvo402xlkwvhgnfe680j6395v9oht147022.jpg',
+            'https://p3-ofp.static.pub//fes/cms/2024/02/01/mw0mjq0c20hp5402yoobcwppuast0b734865.jpg'
+        ]
     },
     {
         id: 8,
