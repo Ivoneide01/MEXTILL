@@ -57,7 +57,7 @@ const produtos = [
         categoria: 'Celular',
         preco: 7999.00,
         descricao: 'Smartphone topo de linha',
-        imagem: 'product_image.jpg'
+        imagem: 'img/products/iphone_15_pro.png'
     },
     {
         id: 2,
@@ -65,7 +65,7 @@ const produtos = [
         categoria: 'Celular',
         preco: 5999.00,
         descricao: 'Android de alta performance',
-        imagem: 'product_image.jpg'
+        imagem: 'img/products/galaxy_s24.jpg'
     },
     {
         id: 3,
@@ -73,7 +73,7 @@ const produtos = [
         categoria: 'Celular',
         preco: 4499.00,
         descricao: 'Câmera profissional',
-        imagem: 'product_image.jpg'
+        imagem: 'img/products/xiaomi_14_ultra.jpg'
     },
     {
         id: 4,
@@ -81,7 +81,7 @@ const produtos = [
         categoria: 'Tablet',
         preco: 8999.00,
         descricao: 'Tablet premium com M2',
-        imagem: 'product_image.jpg'
+        imagem: 'img/products/ipad_pro.jpg'
     },
     {
         id: 5,
@@ -89,7 +89,7 @@ const produtos = [
         categoria: 'Tablet',
         preco: 4999.00,
         descricao: 'Tablet AMOLED 120Hz',
-        imagem: 'product_image.jpg'
+        imagem: 'img/products/tab_s9.png'
     },
     {
         id: 6,
@@ -97,7 +97,7 @@ const produtos = [
         categoria: 'Notebook',
         preco: 15999.00,
         descricao: 'Laptop profissional M3 Max',
-        imagem: 'product_image.jpg'
+        imagem: 'img/products/macbook_pro.png'
     },
     {
         id: 7,
@@ -105,7 +105,7 @@ const produtos = [
         categoria: 'Notebook',
         preco: 9999.00,
         descricao: 'Notebook ultrafino',
-        imagem: 'product_image.jpg'
+        imagem: 'img/products/dell_xps_15.jpg'
     },
     {
         id: 8,
@@ -113,7 +113,7 @@ const produtos = [
         categoria: 'Notebook',
         preco: 7499.00,
         descricao: 'Notebook corporativo',
-        imagem: 'product_image.jpg'
+        imagem: 'img/products/thinkpad_x1.jpg'
     },
     {
         id: 9,
@@ -121,7 +121,7 @@ const produtos = [
         categoria: 'Notebook',
         preco: 11999.00,
         descricao: 'Notebook gamer RTX 4090',
-        imagem: 'product_image.jpg'
+        imagem: 'img/products/asus_rog.png'
     },
     {
         id: 10,
@@ -129,7 +129,7 @@ const produtos = [
         categoria: 'Celular',
         preco: 6499.00,
         descricao: 'Câmera com IA avançada',
-        imagem: 'product_image.jpg'
+        imagem: 'img/products/pixel_8_pro.jpg'
     }
 ];
 
@@ -176,7 +176,7 @@ function renderizarProdutos(lista = produtos) {
         const card = document.createElement('div');
         card.className = 'produto-card';
         card.innerHTML = `
-	            <div class="produto-imagem"><img src="./product_image.jpg" alt="${produto.nome}" style="width: 100%; height: auto; border-radius: 10px;"></div>
+	            <div class="produto-imagem"><img src="${produto.imagem}" alt="${produto.nome}"></div>
             <div class="produto-nome">${produto.nome}</div>
             <div class="produto-descricao">${produto.descricao}</div>
             <div class="produto-preco">R$ ${produto.preco.toFixed(2).replace('.', ',')}</div>
