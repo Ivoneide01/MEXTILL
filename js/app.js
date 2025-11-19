@@ -127,7 +127,13 @@ const produtos = [
         categoria: 'Notebook',
         preco: 15999.00,
         descricao: 'Laptop profissional M3 Max',
-        imagem: 'img/products/macbook_pro.png'
+          imagem: '',
+        imagens: [
+            'https://m.media-amazon.com/images/I/51W6Tzbyu5L._AC_SX679_.jpg',
+            'https://m.media-amazon.com/images/I/61jS6KA-DJL._AC_SX679_.jpg',
+            'https://m.media-amazon.com/images/I/71r2uLmP3KL._AC_SX679_.jpg',
+            'https://m.media-amazon.com/images/I/410IoxZEdkL._AC_SX679_.jpg'
+        ]
     },
     {
         id: 7,
