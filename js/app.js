@@ -57,8 +57,13 @@ const produtos = [
         categoria: 'Celular',
         preco: 7999.00,
         descricao: 'Smartphone topo de linha',
-        imagem: 'https://m.media-amazon.com/images/I/41+jLq6yJKL._AC_SL1000_.jpg',
-        imagem: 'https://m.media-amazon.com/images/I/31jrTen3vUL._AC_SL1000_.jpg'
+        imagem: 'https://m.media-amazon.com/images/I/41+jLq6yJKL._AC_SX679_.jpg',
+        imagens: [
+            'https://m.media-amazon.com/images/I/51k8c06WvdL._AC_SX679_.jpg',
+            'https://m.media-amazon.com/images/I/51k8c06WvdL._AC_SX679_.jpg',
+            'https://m.media-amazon.com/images/I/51k8c06WvdL._AC_SX679_.jpg',
+            'https://m.media-amazon.com/images/I/51k8c06WvdL._AC_SX679_.jpg'
+        ]
     },
     {
         id: 2,
@@ -66,7 +71,13 @@ const produtos = [
         categoria: 'Celular',
         preco: 5999.00,
         descricao: 'Android de alta performance',
-        imagem: 'img/products/galaxy_s24.jpg'
+        imagem: 'img/products/galaxy_s24.jpg',
+        imagens: [
+            'https://images.samsung.com/br/smartphones/galaxy-s24/images/galaxy-s24-highlights-color-front-violet.jpg',
+            'https://images.samsung.com/br/smartphones/galaxy-s24/images/galaxy-s24-highlights-color-back-violet.jpg',
+            'https://images.samsung.com/br/smartphones/galaxy-s24/images/galaxy-s24-highlights-color-side-violet.jpg',
+            'https://images.samsung.com/br/smartphones/galaxy-s24/images/galaxy-s24-highlights-design-camera.jpg'
+        ]
     },
     {
         id: 3,
@@ -74,7 +85,13 @@ const produtos = [
         categoria: 'Celular',
         preco: 4499.00,
         descricao: 'Câmera profissional',
-        imagem: 'img/products/xiaomi_14_ultra.jpg'
+        imagem: 'img/products/xiaomi_14_ultra.jpg',
+        imagens: [
+            'https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1707988794.42852831.png',
+            'https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1707988800.69766963.png',
+            'https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1707988806.93894839.png',
+            'https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1707988813.17755389.png'
+        ]
     },
     {
         id: 4,
@@ -568,8 +585,33 @@ function renderizarProdutos(lista = produtos) {
     lista.forEach(produto => {
         const card = document.createElement('div');
         card.className = 'produto-card';
+        
+        // Verificar se o produto tem múltiplas imagens
+        const temGaleria = produto.imagens && produto.imagens.length > 1;
+        const imagemPrincipal = temGaleria ? produto.imagens[0] : produto.imagem;
+        
+        // Criar HTML da galeria de miniaturas
+        let galeriaHTML = '';
+        if (temGaleria) {
+            galeriaHTML = `
+                <div class="produto-miniaturas">
+                    ${produto.imagens.map((img, index) => `
+                        <img src="${img}" 
+                             alt="${produto.nome} - Imagem ${index + 1}" 
+                             class="miniatura ${index === 0 ? 'active' : ''}"
+                             onclick="trocarImagemProduto(${produto.id}, ${index})">
+                    `).join('')}
+                </div>
+            `;
+        }
+        
         card.innerHTML = `
-	            <div class="produto-imagem"><img src="${produto.imagem}" alt="${produto.nome}"></div>
+            <div class="produto-imagem-container">
+                <div class="produto-imagem">
+                    <img id="img-produto-${produto.id}" src="${imagemPrincipal}" alt="${produto.nome}">
+                </div>
+                ${galeriaHTML}
+            </div>
             <div class="produto-nome">${produto.nome}</div>
             <div class="produto-descricao">${produto.descricao}</div>
             <div class="produto-preco">R$ ${produto.preco.toFixed(2).replace('.', ',')}</div>
@@ -578,6 +620,27 @@ function renderizarProdutos(lista = produtos) {
             </button>
         `;
         grid.appendChild(card);
+    });
+}
+
+// Trocar imagem do produto ao clicar na miniatura
+function trocarImagemProduto(produtoId, imagemIndex) {
+    const produto = produtos.find(p => p.id === produtoId);
+    if (!produto || !produto.imagens) return;
+    
+    // Atualizar imagem principal
+    const imgPrincipal = document.getElementById(`img-produto-${produtoId}`);
+    imgPrincipal.src = produto.imagens[imagemIndex];
+    
+    // Atualizar classe active nas miniaturas
+    const card = imgPrincipal.closest('.produto-card');
+    const miniaturas = card.querySelectorAll('.miniatura');
+    miniaturas.forEach((mini, index) => {
+        if (index === imagemIndex) {
+            mini.classList.add('active');
+        } else {
+            mini.classList.remove('active');
+        }
     });
 }
 

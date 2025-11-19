@@ -359,6 +359,47 @@ body {
 }
 
 /* ============================================
+   GALERIA DE IMAGENS DO PRODUTO
+   ============================================ */
+
+.produto-imagem-container {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.produto-miniaturas {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.produto-miniaturas .miniatura {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border: 2px solid var(--text-gray);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.6;
+}
+
+.produto-miniaturas .miniatura:hover {
+    opacity: 1;
+    border-color: var(--primary-orange-light);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 136, 0, 0.5);
+}
+
+.produto-miniaturas .miniatura.active {
+    opacity: 1;
+    border-color: var(--primary-orange);
+    box-shadow: var(--shadow-orange);
+}
+
+/* ============================================
    CART SIDEBAR
    ============================================ */
 
