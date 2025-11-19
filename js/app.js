@@ -99,7 +99,13 @@ const produtos = [
         categoria: 'Tablet',
         preco: 8999.00,
         descricao: 'Tablet premium com M2',
-        imagem: 'img/products/ipad_pro.jpg'
+        imagem: 'https://m.media-amazon.com/images/I/61sEJ2+OAbL._AC_SX679_.jpg',
+        imagens: [
+            'https://m.media-amazon.com/images/I/61sEJ2+OAbL._AC_SX679_.jpg',
+            'https://m.media-amazon.com/images/I/41NH-l7ctJL._AC_SX679_.jpg',
+            'https://m.media-amazon.com/images/I/51hVyLLOebL._AC_SX679_.jpg',
+            'https://m.media-amazon.com/images/I/51hVyLLOebL._AC_SX679_.jpg'
+        ]
     },
     {
         id: 5,
