@@ -1,19 +1,16 @@
-document.getElementById("botaoFinalizar").addEventListener("click", function () {
-    const total = localStorage.getItem("valor-total"); // ou a variável que já tem o total
+function confirmPayment() {
 
-    // Converter para centavos → Ex.: 59.90 vira 5990
-    const totalCentavos = Math.round(parseFloat(total) * 100);
+    const linkPix = "https://link.infinitepay.io/teste-nidi/PIX-PRODUTO";
+    const linkCredito = "https://link.infinitepay.io/teste-nidi/CREDITO-PRODUTO";
+    const linkDebito = "https://link.infinitepay.io/teste-nidi/DEBITO-PRODUTO";
 
-    // Dados do produto (pode personalizar)
-    const nome = "Compra na Mextill Store";
-    const orderNsu = "PED-" + Date.now();
-    const redirectUrl = encodeURIComponent("https://seusite.com/obrigado");
+    const metodo = document.querySelector('input[name="payment"]:checked').value;
 
-    // COLOQUE O SEU HANDLE GERADO PELA INFINITYPAY
-    const handle = "SEU_HANDLE_AQUI";
+    let linkFinal = "";
 
-    const link = `https://checkout.infinitepay.io/${handle}?items=[{"name":"${encodeURIComponent(nome)}","price":${totalCentavos},"quantity":1}]&order_nsu=${orderNsu}&redirect_url=${redirectUrl}`;
+    if (metodo === "pix") linkFinal = linkPix;
+    if (metodo === "credit") linkFinal = linkCredito;
+    if (metodo === "debit") linkFinal = linkDebito;
 
-    // redirecionar usuário
-    window.location.href = link;
-});
+    window.location.href = linkFinal;
+}
