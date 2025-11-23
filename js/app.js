@@ -696,7 +696,7 @@ function mostrarAvisoMultiplosItens(nomeItem, tipo) {
         whatsappText = `Olá! Gostaria de comprar mais de uma unidade do produto ${nomeItem}. Poderiam me ajudar?`;
     }
 
-    const whatsappLink = `https://wa.me/5511983625454?text=${encodeURIComponent(whatsappText)}`;
+    const whatsappLink = `https://wa.me/5511932539543?text=${encodeURIComponent(whatsappText)}`;
 
     avisoDiv.innerHTML = `
         <h2 style="color: #ff8800;">Ooops</h2>
