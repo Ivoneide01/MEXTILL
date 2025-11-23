@@ -1,7 +1,7 @@
 function confirmPayment() {
 
     const linkPix = "https://invoice.infinitepay.io/teste-nidi/3NH2FMhoSh";
-    const linkCredito = "https://link.infinitepay.io/teste-nidi/CREDITO-PRODUTO";
+    const linkCredito = "https://link.infinitepay.io/teste-nidi/VC1DLUMtSQ-HQMULlrTT-7999,00";
     const linkDebito = "https://link.infinitepay.io/teste-nidi/DEBITO-PRODUTO";
 
     const metodo = document.querySelector('input[name="payment"]:checked').value;
