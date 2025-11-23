@@ -1,6 +1,6 @@
 function confirmPayment() {
 
-    const linkPix = "https://link.infinitepay.io/teste-nidi/PIX-PRODUTO";
+    const linkPix = "https://invoice.infinitepay.io/teste-nidi/3NH2FMhoSh";
     const linkCredito = "https://link.infinitepay.io/teste-nidi/CREDITO-PRODUTO";
     const linkDebito = "https://link.infinitepay.io/teste-nidi/DEBITO-PRODUTO";
 
