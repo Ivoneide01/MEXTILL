@@ -289,7 +289,7 @@ const produtos = [
             'https://http2.mlstatic.com/D_NQ_NP_2X_950626-MLA84480583525_052025-F.webp'
         ]
     },
-    
+
 ];
 
 // Carrinho de compras
@@ -399,6 +399,8 @@ function adicionarAoCarrinho(produtoId) {
     const produto = produtos.find(p => p.id === produtoId);
     const itemCarrinho = carrinho.find(item => item.id === produtoId);
 
+
+
     if (itemCarrinho) {
         itemCarrinho.quantidade++;
     } else {
@@ -428,6 +430,8 @@ function removerDoCarrinho(produtoId) {
 function aumentarQuantidade(produtoId) {
     const item = carrinho.find(item => item.id === produtoId);
     if (item) {
+
+
         item.quantidade++;
         salvarCarrinho();
         atualizarCarrinho();
@@ -493,6 +497,8 @@ function atualizarCarrinho() {
 function toggleCart() {
     const sidebar = document.getElementById('cartSidebar');
     sidebar.classList.toggle('active');
+    // Garantir que o aviso de múltiplos itens seja removido se o carrinho for fechado
+    fecharAvisoMultiplosItens();
 }
 
 // Ir para checkout
@@ -501,6 +507,29 @@ function goToCheckout() {
         mostrarNotificacao('Adicione produtos ao carrinho primeiro!');
         return;
     }
+
+    // --- NOVA LÓGICA DE VERIFICAÇÃO DE CARRINHO NO CHECKOUT ---
+    const totalItens = carrinho.reduce((total, item) => total + item.quantidade, 0);
+    
+    // Verifica se há mais de um produto diferente (carrinho.length > 1) OU se a quantidade total é maior que 1
+    if (carrinho.length > 1 || totalItens > 1) {
+        let nomeItem = '';
+        let tipo = '';
+
+        if (carrinho.length > 1) {
+            // Tentativa de comprar produtos diferentes
+            nomeItem = 'múltiplos produtos';
+            tipo = 'produto';
+        } else if (totalItens > 1) {
+            // Tentativa de comprar mais de uma unidade do mesmo produto
+            nomeItem = carrinho[0].nome;
+            tipo = 'quantidade';
+        }
+
+        mostrarAvisoMultiplosItens(nomeItem, tipo);
+        return; // Impede o checkout
+    }
+    // --- FIM DA NOVA LÓGICA DE VERIFICAÇÃO DE CARRINHO NO CHECKOUT ---
 
     // Fechar sidebar
     document.getElementById('cartSidebar').classList.remove('active');
@@ -537,6 +566,8 @@ function abrirCheckout() {
 // Fechar modal de checkout
 function closeCheckout() {
     document.getElementById('checkoutModal').classList.remove('active');
+    // Garantir que o aviso de múltiplos itens seja removido se o modal for fechado
+    fecharAvisoMultiplosItens();
 }
 
 // Mostrar método de pagamento
@@ -634,6 +665,66 @@ function closeSuccess() {
 // Scroll para produtos
 function scrollToProdutos() {
     document.getElementById('produtos').scrollIntoView({ behavior: 'smooth' });
+}
+
+// Mostrar aviso de múltiplos itens com botões
+function mostrarAvisoMultiplosItens(nomeItem, tipo) {
+    // 1. Fechar o carrinho lateral (sidebar)
+    document.getElementById('cartSidebar').classList.remove('active');
+
+    // 2. Usar o modal de checkout como modal de aviso
+    const modal = document.getElementById('checkoutModal');
+    const modalContent = modal.querySelector('.modal-content');
+    
+    // Esconder o conteúdo original do checkout
+    modalContent.style.display = 'none';
+
+    // Criar o conteúdo do aviso
+    const avisoDiv = document.createElement('div');
+    avisoDiv.id = 'avisoMultiplosItens';
+    avisoDiv.style.textAlign = 'center';
+    avisoDiv.style.padding = '20px';
+    
+    let mensagem = '';
+    let whatsappText = '';
+
+    if (tipo === 'produto') {
+        mensagem = `⚠️ **Atenção:** Você já tem um produto no carrinho. Para compras com link único, é permitido apenas 1 produto por vez. Para adicionar **${nomeItem}**, você precisa remover o item atual.`;
+        whatsappText = `Olá! Gostaria de comprar mais de um produto. Poderiam me ajudar?`;
+    } else if (tipo === 'quantidade') {
+        mensagem = `⚠️ **Atenção:** Para compras com link único, é permitido apenas 1 unidade do produto **${nomeItem}**. Para comprar mais unidades, por favor, fale com nosso suporte.`;
+        whatsappText = `Olá! Gostaria de comprar mais de uma unidade do produto ${nomeItem}. Poderiam me ajudar?`;
+    }
+
+    const whatsappLink = `https://wa.me/5511983625454?text=${encodeURIComponent(whatsappText)}`;
+
+    avisoDiv.innerHTML = `
+        <h2 style="color: #ff8800;">Limite de Compra Atingido</h2>
+        <p style="margin-bottom: 30px; font-size: 1.1em;">${mensagem}</p>
+        <div style="display: flex; justify-content: center; gap: 20px;">
+            <button class="btn btn-secondary" onclick="fecharAvisoMultiplosItens()">Voltar</button>
+            <a href="${whatsappLink}" target="_blank" class="btn btn-primary" onclick="fecharAvisoMultiplosItens()">Falar com o Suporte (WhatsApp)</a>
+        </div>
+    `;
+
+    // Adicionar o aviso ao modal e exibi-lo
+    modal.appendChild(avisoDiv);
+    modal.classList.add('active');
+}
+
+// Função para fechar o aviso e restaurar o modal de checkout
+function fecharAvisoMultiplosItens() {
+    const modal = document.getElementById('checkoutModal');
+    const avisoDiv = document.getElementById('avisoMultiplosItens');
+    const modalContent = modal.querySelector('.modal-content');
+
+    if (avisoDiv) {
+        avisoDiv.remove();
+    }
+    
+    // Restaurar o conteúdo original do checkout (se houver)
+    modalContent.style.display = 'block';
+    modal.classList.remove('active');
 }
 
 // Mostrar notificação

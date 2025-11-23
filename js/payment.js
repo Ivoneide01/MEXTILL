@@ -1,12 +1,16 @@
-function goToCheckout() {
-    if (carrinho.length === 0) {
-        mostrarNotificacao('Adicione produtos ao carrinho primeiro!');
-        return;
-    }
+function confirmPayment() {
 
-    // Fechar sidebar
-    document.getElementById('cartSidebar').classList.remove('active');
+    const linkPix = "https://link.infinitepay.io/teste-nidi/PIX-PRODUTO";
+    const linkCredito = "https://link.infinitepay.io/teste-nidi/CREDITO-PRODUTO";
+    const linkDebito = "https://link.infinitepay.io/teste-nidi/DEBITO-PRODUTO";
 
-    // Abrir modal de checkout
-    abrirCheckout();
+    const metodo = document.querySelector('input[name="payment"]:checked').value;
+
+    let linkFinal = "";
+
+    if (metodo === "pix") linkFinal = linkPix;
+    if (metodo === "credit") linkFinal = linkCredito;
+    if (metodo === "debit") linkFinal = linkDebito;
+
+    window.location.href = linkFinal;
 }
