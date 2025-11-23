@@ -689,17 +689,17 @@ function mostrarAvisoMultiplosItens(nomeItem, tipo) {
     let whatsappText = '';
 
     if (tipo === 'produto') {
-        mensagem = `⚠️ **Atenção:** Você já tem um produto no carrinho. Para compras com link único, é permitido apenas 1 produto por vez. Para adicionar **${nomeItem}**, você precisa remover o item atual.`;
+        mensagem = `⚠️ Hummm, nosso site permite apenas uma compra por vez. Por favor, finalize cada pedido individualmente ou entre em contato com nosso suporte para te ajudar.${nomeItem}, você precisa remover o item atual.`;
         whatsappText = `Olá! Gostaria de comprar mais de um produto. Poderiam me ajudar?`;
     } else if (tipo === 'quantidade') {
-        mensagem = `⚠️ **Atenção:** Para compras com link único, é permitido apenas 1 unidade do produto **${nomeItem}**. Para comprar mais unidades, por favor, fale com nosso suporte.`;
+        mensagem = `⚠️ Hummm, nosso site permite apenas uma compra por vez. Por favor, finalize cada pedido individualmente ou entre em contato com nosso suporte para te ajudar.${nomeItem}, você precisa remover o item atual.`;
         whatsappText = `Olá! Gostaria de comprar mais de uma unidade do produto ${nomeItem}. Poderiam me ajudar?`;
     }
 
     const whatsappLink = `https://wa.me/5511983625454?text=${encodeURIComponent(whatsappText)}`;
 
     avisoDiv.innerHTML = `
-        <h2 style="color: #ff8800;">Limite de Compra Atingido</h2>
+        <h2 style="color: #ff8800;">Ooops</h2>
         <p style="margin-bottom: 30px; font-size: 1.1em;">${mensagem}</p>
         <div style="display: flex; justify-content: center; gap: 20px;">
             <button class="btn btn-secondary" onclick="fecharAvisoMultiplosItens()">Voltar</button>
