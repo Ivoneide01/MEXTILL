@@ -289,7 +289,7 @@ const produtos = [
             'https://http2.mlstatic.com/D_NQ_NP_2X_950626-MLA84480583525_052025-F.webp'
         ]
     },
-
+    
 ];
 
 // Carrinho de compras
